@@ -26,73 +26,210 @@
                 <h1>You Win!</h1>
             {% endif %}
             <hr>
-            <div class="row">
-                <div class="col-sm-5">
-                    <h2>You Chose</h2>
-                    {% if player1 == "Rock"%}
-                    <pre style="margin-left:3em; margin-right:3em;">
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-                    </pre>
-                    {% elseif player1 == "Paper" %}
-                    <pre style="margin-left:3em; margin-right:3em;">
-_______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-                    </pre>
-                    {% elseif player1 == "Scissors" %}
-                    <pre style="margin-left:3em; margin-right:3em;">
-___
----'  ____)_______
-            _______)
-           __________)
-      (____)
----.__(___)
-                    </pre>
-                    {%endif%}
+            {%if winner == "Player 1" %}
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>You </h2>
+                        {% if player1 == "Rock"%}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)
+                  (_____)
+                  (_____)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {% elseif player1 == "Paper" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                      _______)
+                     _______)
+            ---.__________)
+                        </pre>
+                        {% elseif player1 == "Scissors" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                   __________)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {%endif%}
+                    </div>
+                    <div class="col-sm-2" style="padding-top: 6em; padding-bottom: 6em;">
+                        <h1>Beats</h1>
+                    </div>
+                    <div class="col-sm-5">
+                        <h2>Computer </h2>
+                        {% if player2 == "Rock"%}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)
+                  (_____)
+                  (_____)
+                  (____)
+            ---.__(___)
+                        </pre >
+                        {% elseif player2 == "Paper" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                      _______)
+                     _______)
+            ---.__________)
+                        </pre >
+                        {% elseif player2 == "Scissors" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                   __________)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {%endif%}
+                    </div>
                 </div>
-                <div class="col-sm-2" style="padding-top: 6em;">
-                    <h1>VS</h1>
+            {% elseif winner == "Player 2" %}
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>Computer </h2>
+                        {% if player2 == "Rock"%}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)
+                  (_____)
+                  (_____)
+                  (____)
+            ---.__(___)
+                        </pre >
+                        {% elseif player2 == "Paper" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                      _______)
+                     _______)
+            ---.__________)
+                        </pre >
+                        {% elseif player2 == "Scissors" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                   __________)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {%endif%}
+                    </div>
+                    <div class="col-sm-2" style="padding-top: 6em; padding-bottom: 6em;">
+                        <h1>Beats</h1>
+                    </div>
+                    <div class="col-sm-5">
+                        <h2>You </h2>
+                        {% if player1 == "Rock"%}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)
+                  (_____)
+                  (_____)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {% elseif player1 == "Paper" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                      _______)
+                     _______)
+            ---.__________)
+                        </pre>
+                        {% elseif player1 == "Scissors" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                   __________)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {%endif%}
+                    </div>
                 </div>
-                <div class="col-sm-5">
-                    <h2>Computer Chose</h2>
-                    {% if player2 == "Rock"%}
-                    <pre style="margin-left:3em; margin-right:3em;">
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-                    </pre >
-                    {% elseif player2 == "Paper" %}
-                    <pre style="margin-left:3em; margin-right:3em;">
-_______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-                    </pre >
-                    {% elseif player2 == "Scissors" %}
-                    <pre style="margin-left:3em; margin-right:3em;">
-___
----'  ____)_______
-            _______)
-           __________)
-      (____)
----.__(___)
-                    </pre>
-                    {%endif%}
+                {%else%}
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>You </h2>
+                        {% if player1 == "Rock"%}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)
+                  (_____)
+                  (_____)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {% elseif player1 == "Paper" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                      _______)
+                     _______)
+            ---.__________)
+                        </pre>
+                        {% elseif player1 == "Scissors" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                   __________)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {%endif%}
+                    </div>
+                    <div class="col-sm-2" style="padding-top: 6em;">
+                    </div>
+                    <div class="col-sm-5">
+                        <h2>Computer </h2>
+                        {% if player2 == "Rock"%}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)
+                  (_____)
+                  (_____)
+                  (____)
+            ---.__(___)
+                        </pre >
+                        {% elseif player2 == "Paper" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                      _______)
+                     _______)
+            ---.__________)
+                        </pre >
+                        {% elseif player2 == "Scissors" %}
+                        <pre class="text-left" style="width:23em; margin-left:auto; margin-right:auto;">
+                _______
+            ---'   ____)____
+                      ______)
+                   __________)
+                  (____)
+            ---.__(___)
+                        </pre>
+                        {%endif%}
+                    </div>
                 </div>
-            </div>
+            {% endif %}
             <br>
             <br>
             <div >
